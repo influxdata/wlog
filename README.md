@@ -45,7 +45,7 @@ func main() {
 }
 ```
 
-Prefix log messages with a log level char and the `!` delimeter.
+Prefix log messages with a log level char and the `!` delimiter.
 
 ```go
 logger.Println("D! this is a debug log")

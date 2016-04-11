@@ -36,7 +36,7 @@ const (
 	OFF
 )
 
-const Delimeter = '!'
+const Delimiter = '!'
 
 var invalidMSG = []byte("log messages must have 'L!' prefix where L is one of 'D', 'I', 'W', 'E'")
 
@@ -117,7 +117,7 @@ func (w *Writer) Write(buf []byte) (int, error) {
 		if w.start == -1 {
 			// Find start of message index
 			for i, c := range buf {
-				if c == Delimeter && i > 0 {
+				if c == Delimiter && i > 0 {
 					l := buf[i-1]
 					level := Levels[l]
 					if level > 0 {
